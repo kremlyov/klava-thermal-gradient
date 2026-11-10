@@ -8,7 +8,7 @@
 
 Откройте `index.html` в браузере — сборка и установка зависимостей не нужны. Все изображения встроены в файл.
 
-Облачная версия: [klava-thermal-gradient](https://klava-thermal-gradient.vladadyvats.chatgpt.site) (доступ по настройкам Sites).
+Публичный прототип на GitHub Pages: [открыть](https://kremlyov.github.io/klava-thermal-gradient/).
 
 ## Редактировать
 

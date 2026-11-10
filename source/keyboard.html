@@ -1,0 +1,232 @@
+<div id="thermal-keyboard-preview">
+  <!-- Flat transparent keys from Figma frame 1801:94592; original background is shared. -->
+  <div class="phone-stage">
+  <main class="phone-screen" aria-label="Экран переписки с температурной клавиатурой" data-node-id="1801:94592">
+    <section class="chat-history" aria-label="Переписка Sport/design">
+      <div class="chat-art" data-node-id="1791:87053"><img class="chat-source" src="assets/chat-screen.webp" alt="Чат Sport/design, 11 участников. Переписка из исходного макета." draggable="false"></div>
+      <label class="typing-composer"><span class="keyboard-sr">Сообщение</span><textarea class="typing-input" rows="1" placeholder="Сообщение" inputmode="none" spellcheck="false" autocomplete="off" aria-label="Сообщение"></textarea></label>
+    </section>
+  <section class="keyboard" aria-label="Русская клавиатура: чем быстрее набор, тем теплее фон" data-node-id="1801:94259">
+    <div class="keyboard-background" aria-hidden="true" data-node-id="1801:94525"><img class="keyboard-reference" src="assets/keyboard-background.png" alt="" draggable="false"></div>
+    <canvas class="keyboard-clouds" width="360" height="291" aria-hidden="true"></canvas>
+    <div class="keyboard-panel" data-node-id="1801:94362">
+      <button class="keyboard-round cursor-interaction" type="button" aria-label="Приложения"><img src="assets/apps.svg" alt=""></button>
+      <div class="keyboard-suggestions"><button type="button" class="cursor-interaction">Привет</button><button type="button" class="cursor-interaction">Приветик</button><button type="button" class="cursor-interaction">Приветствую</button></div>
+      <button class="keyboard-round cursor-interaction" type="button" aria-label="Эмодзи"><img src="assets/smile.svg" alt=""></button>
+    </div>
+    <div class="keyboard-rows" data-node-id="1801:94294">
+      <div class="keyboard-row" data-letters="йцукенгшщзх"></div>
+      <div class="keyboard-row" data-letters="фывапролджэ"></div>
+      <div class="keyboard-row keyboard-row-third">
+        <button class="key key-light cursor-interaction" type="button" data-action="shift" aria-label="Регистр" aria-pressed="true"><img src="assets/shift.svg" alt=""></button>
+        <button class="key key-light cursor-interaction" type="button" data-action="delete" aria-label="Удалить"><img src="assets/delete.svg" alt=""></button>
+      </div>
+      <div class="keyboard-row keyboard-row-bottom">
+        <button class="key key-light cursor-interaction" type="button" data-action="numbers" aria-label="Числа и символы"><img src="assets/numbers.svg" alt=""></button>
+        <button class="key key-light cursor-interaction" type="button" data-action="language" aria-label="Сменить язык"><img src="assets/globe.svg" alt=""></button>
+        <button class="key cursor-interaction" type="button" data-value=",">,</button>
+        <button class="key key-light keyboard-space cursor-interaction" type="button" data-value=" " aria-label="Пробел"><span class="keyboard-language"><img src="assets/left.svg" alt=""><span>Русский</span><img src="assets/right.svg" alt=""></span><img src="assets/mic.svg" alt=""></button>
+        <button class="key cursor-interaction" type="button" data-value=".">.</button>
+        <button class="key key-light cursor-interaction" type="button" data-action="enter" aria-label="Ввод"><img src="assets/enter.svg" alt=""></button>
+      </div>
+    </div>
+    <div class="keyboard-navigation" aria-hidden="true"><span class="nav-square"></span><span class="nav-circle"></span><img src="assets/back.svg" alt=""></div>
+    <span class="keyboard-sr" aria-live="polite" data-feedback></span>
+  </section>
+  </main>
+  </div>
+</div>
+<style>
+/* Paint the document too when this fragment is opened directly in a browser. */
+html:has(#thermal-keyboard-preview),body:has(#thermal-keyboard-preview) {margin:0;padding:0;background:#000;min-height:100%;}
+body:has(#thermal-keyboard-preview) {min-height:100svh;}
+#thermal-keyboard-preview {display:grid;place-items:center;box-sizing:border-box;min-height:100svh;padding:24px;background:#000;min-width:0;width:100%;}
+#thermal-keyboard-preview * {box-sizing:border-box;}
+#thermal-keyboard-preview .phone-stage {position:relative;width:calc(360px * var(--prototype-scale,1));height:calc(783px * var(--prototype-scale,1));}
+#thermal-keyboard-preview .phone-screen {position:relative;width:360px;min-width:0;border-radius:40px;overflow:hidden;background:#fff;color-scheme:light;transform:scale(var(--prototype-scale,1));transform-origin:top left;}
+#thermal-keyboard-preview .chat-history {position:relative;width:100%;aspect-ratio:360/492;background:#fff;}
+#thermal-keyboard-preview .chat-art {position:absolute;inset:0 0 auto;aspect-ratio:360/488;overflow:hidden;pointer-events:none;}
+#thermal-keyboard-preview .chat-source {position:absolute;top:0;left:0;width:100%;height:auto;display:block;}
+#thermal-keyboard-preview .typing-composer {position:absolute;display:block;top:91.46%;left:15.55%;width:63.05%;height:6.1%;}
+#thermal-keyboard-preview .typing-input {display:block;box-sizing:border-box;width:100%;height:100%;min-height:0;padding:3px 0;border:0;border-radius:0;background:#fff;color:#151515;font:15.5px/22px -apple-system,BlinkMacSystemFont,Arial,sans-serif;resize:none;caret-color:#529beb;}
+#thermal-keyboard-preview .typing-input::placeholder {color:#999;}
+#thermal-keyboard-preview .typing-input:focus,#thermal-keyboard-preview .typing-input:focus-visible {outline:none;box-shadow:none;}
+#thermal-keyboard-preview .keyboard {position:relative;isolation:isolate;width:360px;max-width:100%;min-width:0;height:291px;border-radius:26px;overflow:hidden;background:#da6600;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Arial,sans-serif;color:white;user-select:none;-webkit-user-select:none;}
+#thermal-keyboard-preview .keyboard-background {position:absolute;inset:0;pointer-events:none;filter:hue-rotate(-85.5deg);}
+#thermal-keyboard-preview .keyboard-reference {display:block;width:100%;height:100%;}
+#thermal-keyboard-preview .keyboard-clouds {position:absolute;width:100%;height:100%;inset:0;pointer-events:none;filter:hue-rotate(-85.5deg);}
+#thermal-keyboard-preview button {font-family:inherit;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+#thermal-keyboard-preview .keyboard-panel {position:relative;height:52px;padding:6px;display:flex;align-items:center;gap:0;}
+#thermal-keyboard-preview .keyboard-round {position:relative;display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex-shrink:0;border:0;border-radius:108px;background:rgba(255,255,255,.2);color:white;padding:0;overflow:hidden;}
+#thermal-keyboard-preview .keyboard-suggestions {display:flex;align-items:center;gap:1px;padding:0 4px;min-width:0;flex:1;overflow:hidden;}
+#thermal-keyboard-preview .keyboard-suggestions button {padding:8px;border:0;border-radius:99px;background:none;color:white;font-size:17px;letter-spacing:-.4px;white-space:nowrap;flex-shrink:0;}
+#thermal-keyboard-preview .keyboard-suggestions button:first-child {font-weight:700;}
+#thermal-keyboard-preview .keyboard-rows {position:relative;padding:0 4px;display:flex;flex-direction:column;gap:8px;}
+#thermal-keyboard-preview .keyboard-row {display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:4px;height:41px;}
+#thermal-keyboard-preview .keyboard-row-third {grid-template-columns:minmax(0,35.727fr) repeat(9,minmax(0,26.694fr)) minmax(0,36.027fr);}
+#thermal-keyboard-preview .keyboard-row-bottom {height:43px;grid-template-columns:minmax(0,38.5fr) minmax(0,33.833fr) minmax(0,29.833fr) minmax(0,148fr) minmax(0,29.833fr) minmax(0,52fr);}
+#thermal-keyboard-preview .key {position:relative;display:flex;align-items:center;justify-content:center;min-width:0;height:100%;padding:0;overflow:hidden;border:0;border-radius:8px;background:rgba(255,255,255,.2);color:white;font-size:21px;line-height:1;font-weight:400;}
+#thermal-keyboard-preview .key-surface {position:absolute;inset:0;border-radius:inherit;pointer-events:none;}
+#thermal-keyboard-preview .key-surface::before {content:"";position:absolute;inset:0;border-radius:inherit;background:#1d1d1d;mix-blend-mode:screen;}
+#thermal-keyboard-preview .key-surface::after {content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(to bottom,rgba(102,102,102,var(--key-upper-tint,.2)),transparent 32.692%),linear-gradient(to bottom,transparent 50%,rgba(102,102,102,var(--key-lower-tint,.2)));mix-blend-mode:plus-lighter;}
+#thermal-keyboard-preview .key-effects {position:absolute;inset:0;z-index:2;border-radius:inherit;pointer-events:none;mix-blend-mode:plus-lighter;box-shadow:inset -12px -12px 10px -16px #b3b3b399,inset 2px 2px 3px -3px #b3b3b3;}
+#thermal-keyboard-preview .key-burn {position:absolute;inset:0;border-radius:inherit;pointer-events:none;mix-blend-mode:multiply;box-shadow:inset 0 0 22px #f2f2f280;}
+#thermal-keyboard-preview .key-content {position:relative;z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+#thermal-keyboard-preview .key-light {--key-lower-tint:.4;background:transparent;color:#000;}
+#thermal-keyboard-preview .key-light .key-surface {background:#ffffffe6;}
+#thermal-keyboard-preview .key-light .key-effects {box-shadow:inset -12px -12px 6px -14px #b3b3b380,inset 2px 2px 1px -2px #b3b3b3;}
+#thermal-keyboard-preview .keyboard-row-bottom .key,#thermal-keyboard-preview .keyboard-row-third .key-light {border-radius:10px;}
+/* Flat keys retain a simple, brighter fill while held. */
+#thermal-keyboard-preview .key:not(.key-light):active,#thermal-keyboard-preview .key:not(.key-light).is-pressed,#thermal-keyboard-preview .keyboard-round:active,#thermal-keyboard-preview .keyboard-round.is-pressed {background:rgba(255,255,255,.35);}
+#thermal-keyboard-preview .key-light:active,#thermal-keyboard-preview .key-light.is-pressed {--key-upper-tint:.3;--key-lower-tint:.6;}
+#thermal-keyboard-preview .keyboard-space {display:flex;gap:8px;font-size:14px;}
+#thermal-keyboard-preview .keyboard-space>.key-content {gap:8px;}
+#thermal-keyboard-preview .keyboard-language {display:flex;align-items:center;justify-content:center;gap:4px;white-space:nowrap;}
+#thermal-keyboard-preview img {display:block;flex-shrink:0;position:relative;}
+#thermal-keyboard-preview .keyboard-navigation {position:relative;height:49px;display:flex;align-items:center;justify-content:center;gap:63px;transform:translateX(7.5px);}
+#thermal-keyboard-preview .nav-square {width:12px;height:12px;border-radius:2px;background:#ffffff80;}
+#thermal-keyboard-preview .nav-circle {width:18px;height:18px;position:relative;border:2px solid #ffffff80;border-radius:50%;}
+#thermal-keyboard-preview .nav-circle::after {content:"";position:absolute;inset:2px;border-radius:50%;background:#ffffff80;}
+#thermal-keyboard-preview .keyboard-sr {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+@media(max-width:350px){#thermal-keyboard-preview .keyboard-space{gap:3px;font-size:12px;}#thermal-keyboard-preview .keyboard-space>.key-content{gap:3px;}#thermal-keyboard-preview .keyboard-language{gap:1px;}#thermal-keyboard-preview .keyboard-suggestions button{padding:8px 6px;}}
+@media(prefers-reduced-motion:reduce){#thermal-keyboard-preview .key{transition:none;}#thermal-keyboard-preview .key:hover{transform:none;}}
+</style>
+<script>
+(() => {
+ const root=document.getElementById('thermal-keyboard-preview');
+ function fitPrototype(){
+  const scale=Math.max(.05,Math.min(1,(root.clientWidth-48)/360,(window.innerHeight-48)/783));
+  root.style.setProperty('--prototype-scale',String(scale));
+ }
+ new ResizeObserver(fitPrototype).observe(root);
+ window.addEventListener('resize',fitPrototype);
+ fitPrototype();
+ const keyboard=root.querySelector('.keyboard');
+ const clouds=root.querySelector('canvas');
+ const context=clouds.getContext('2d');
+ const image=context?.createImageData(clouds.width,clouds.height);
+ const background=root.querySelector('.keyboard-reference');
+ const backgroundLayer=root.querySelector('.keyboard-background');
+ let backgroundPixels=null;
+ const editor=root.querySelector('.typing-input');
+ const rows=root.querySelectorAll('[data-letters]');
+ let uppercase=true,english=false,numbers=false;
+ let inputRate=0,temperature=5,targetTemperature=5,lastThermal=performance.now(),repeatInput=false,composing=false,lastComposition=-Infinity;
+ function updateThermal(now){
+  const dt=Math.max(0,(now-lastThermal)/1000);lastThermal=now;
+  inputRate*=Math.exp(-dt/2);
+  const fraction=Math.pow(Math.max(0,Math.min(1,(inputRate-.2)/4)),.85);
+  targetTemperature=5+40*fraction;
+  const inertia=targetTemperature>temperature?.9:3.4;
+  temperature+=(targetTemperature-temperature)*(1-Math.exp(-dt/inertia));
+  keyboard.dataset.temperature=temperature.toFixed(2);
+  keyboard.dataset.typingRate=inputRate.toFixed(2);
+ }
+ function registerStroke(){updateThermal(performance.now());inputRate=Math.min(12,inputRate+.5);}
+ function emitInput(value,action){keyboard.dispatchEvent(new CustomEvent('keyboard-input',{bubbles:true,detail:{value,action,text:editor.value}}));}
+ function virtualEdit(value,action){
+  let start=editor.selectionStart,end=editor.selectionEnd;
+  if(action==='delete'&&start===end&&start>0){
+   const prefix=editor.value.slice(0,start);
+   if(globalThis.Intl?.Segmenter){const segments=[...new Intl.Segmenter(undefined,{granularity:'grapheme'}).segment(prefix)];start=segments[segments.length-1].index;}
+   else start-=Array.from(prefix).pop().length;
+  }
+  editor.setRangeText(value,start,end,'end');repeatInput=false;
+  editor.dispatchEvent(new InputEvent('input',{bubbles:true,inputType:action==='delete'?'deleteContentBackward':'insertText',data:value}));
+  editor.focus({preventScroll:true});
+ }
+ const pointerPresses=new Map();
+ function releasePointer(e){const button=pointerPresses.get(e.pointerId);if(button)button.classList.remove('is-pressed');pointerPresses.delete(e.pointerId);}
+ root.addEventListener('pointerdown',e=>{
+  const button=e.target.closest('.keyboard button');if(!button)return;
+  if(document.activeElement===editor)e.preventDefault();
+  if(button.matches('.key,.keyboard-round')){button.classList.add('is-pressed');pointerPresses.set(e.pointerId,button);}
+ });
+ window.addEventListener('pointerup',releasePointer);
+ window.addEventListener('pointercancel',releasePointer);
+ window.addEventListener('blur',()=>{pointerPresses.forEach(button=>button.classList.remove('is-pressed'));pointerPresses.clear();});
+ editor.addEventListener('compositionstart',()=>{composing=true;});
+ editor.addEventListener('compositionend',e=>{composing=false;lastComposition=performance.now();if(e.data)registerStroke();});
+ editor.addEventListener('input',e=>{
+  const type=e.inputType||'';
+  if(!composing&&!e.isComposing&&!repeatInput&&performance.now()-lastComposition>60&&['insertText','insertLineBreak','insertParagraph'].includes(type)&&e.data!=='')registerStroke();
+  const action=type.startsWith('delete')?'delete':'insert';emitInput(e.data||'',action);
+ });
+ editor.addEventListener('keydown',e=>{
+  repeatInput=e.repeat;
+  if(e.ctrlKey||e.metaKey||e.altKey||e.isComposing)return;
+  const match=e.key==='Backspace'?root.querySelector('[data-action="delete"]'):e.key==='Enter'?root.querySelector('[data-action="enter"]'):[...root.querySelectorAll('.key[data-value]')].find(b=>b.dataset.value.toLowerCase()===e.key.toLowerCase());
+  if(match)match.classList.add('is-pressed');
+ });
+ editor.addEventListener('keyup',()=>{repeatInput=false;root.querySelectorAll('.is-pressed').forEach(b=>b.classList.remove('is-pressed'));});
+ editor.addEventListener('blur',()=>{repeatInput=false;root.querySelectorAll('.is-pressed').forEach(b=>b.classList.remove('is-pressed'));});
+ const sets={ru:['йцукенгшщзх','фывапролджэ','ячсмитьбю'],en:['qwertyuiop','asdfghjkl','zxcvbnm'],num:['1234567890','@#₽%&*()-+','!?/;:«»=_']};
+ function populate(){
+  const set=numbers?sets.num:english?sets.en:sets.ru;
+  const letter=(char)=>{const b=document.createElement('button');b.className='key cursor-interaction';b.type='button';b.dataset.value=char;b.textContent=uppercase?char.toUpperCase():char;return b;};
+  rows.forEach((row,i)=>{row.replaceChildren(...[...set[i]].map(letter));row.style.gridTemplateColumns='repeat('+set[i].length+',minmax(0,1fr))';});
+  const third=root.querySelector('.keyboard-row-third');third.querySelectorAll('[data-value]').forEach(b=>b.remove());
+  const end=third.lastElementChild;[...set[2]].forEach(c=>third.insertBefore(letter(c),end));
+  third.style.gridTemplateColumns='minmax(0,35.727fr) repeat('+set[2].length+',minmax(0,26.694fr)) minmax(0,36.027fr)';
+  root.querySelector('.keyboard-language span').textContent=english?'English':'Русский';
+  for(const button of root.querySelectorAll('.key,.keyboard-round')){
+   if(button.querySelector('.key-content'))continue;
+   const content=document.createElement('span');content.className='key-content';
+   while(button.firstChild)content.appendChild(button.firstChild);
+   if(!button.classList.contains('key-light')){button.append(content);continue;}
+   const surface=document.createElement('span');surface.className='key-surface';surface.setAttribute('aria-hidden','true');
+   const effect=document.createElement('span');effect.className='key-effects';effect.setAttribute('aria-hidden','true');
+   const burn=document.createElement('span');burn.className='key-burn';burn.setAttribute('aria-hidden','true');
+   button.append(surface,burn,effect,content);
+  }
+ }
+ populate();
+ root.addEventListener('click',e=>{
+  const button=e.target.closest('button');if(!button)return;
+  const action=button.dataset.action;
+  if(action==='shift'){uppercase=!uppercase;button.setAttribute('aria-pressed',String(uppercase));populate();return;}
+  if(action==='language'){english=!english;populate();return;}
+  if(action==='numbers'){numbers=!numbers;button.setAttribute('aria-pressed',String(numbers));populate();return;}
+  let value=button.dataset.value;
+  if(button.parentElement.classList.contains('keyboard-suggestions'))value=button.textContent+' ';
+  if(action==='enter')value='\n';
+  if(action==='delete')virtualEdit('','delete');
+  else if(value!==undefined)virtualEdit(uppercase&&value.length===1?value.toUpperCase():value,'insert');
+  else return;
+  root.querySelector('[data-feedback]').textContent=action==='delete'?'Удалено':value===' '?'Пробел':value;
+ });
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ let elapsed=0,last=0,lastPaint=-100,visible=true;
+ function prepareBackground(){
+  if(!context)return;
+  const source=document.createElement('canvas');source.width=clouds.width;source.height=clouds.height;
+  const ctx=source.getContext('2d');ctx.fillStyle='#da6600';ctx.fillRect(0,0,source.width,source.height);
+  ctx.drawImage(background,0,0,source.width,source.height);
+  backgroundPixels=ctx.getImageData(0,0,source.width,source.height).data;
+  paint(elapsed);
+ }
+ function paint(seconds){
+  const hue=temperature<=24?(temperature-24)*4.5:(temperature-24)*1.35;
+  const warmth=Math.max(0,Math.min(1,(temperature-24)/21));
+  // Compress the hottest hues into orange, keeping the original lights and shadows.
+  const palette='hue-rotate('+hue.toFixed(2)+'deg) sepia('+warmth.toFixed(3)+') saturate('+(1+1.5*warmth).toFixed(3)+') hue-rotate('+(-15*warmth).toFixed(2)+'deg)';
+  clouds.style.filter=backgroundLayer.style.filter=palette;
+  if(!context||!image||!backgroundPixels)return;
+  const data=image.data,w=clouds.width,h=clouds.height,source=backgroundPixels;
+  const flowX=Math.sin(seconds*.22),flowY=Math.sin(seconds*.17);
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+   const u=x/w,v=y/h,edge=Math.pow(Math.sin(Math.PI*u)*Math.sin(Math.PI*v),2),weight=edge*Math.min(1,v*2);
+   const sx=Math.max(0,Math.min(w-1.001,x+flowX*Math.sin(v*5.5+seconds*.09)*12*weight));
+   const sy=Math.max(0,Math.min(h-1.001,y+flowY*Math.sin(u*5.2+seconds*.11)*16*weight));
+   const ix=Math.floor(sx),iy=Math.floor(sy),fx=sx-ix,fy=sy-iy,k=(iy*w+ix)*4,i=(y*w+x)*4;
+   for(let c=0;c<3;c++){const a=source[k+c]*(1-fx)+source[k+4+c]*fx,b=source[k+w*4+c]*(1-fx)+source[k+w*4+4+c]*fx;data[i+c]=a*(1-fy)+b*fy;}data[i+3]=255;
+  }
+  context.putImageData(image,0,0);
+ }
+ function tick(now){const dt=last?Math.min((now-last)/1000,.1):0;last=now;if(!document.hidden&&visible){updateThermal(now);if(!reduced.matches)elapsed+=dt;if(now-lastPaint>=40){paint(elapsed);lastPaint=now;}}requestAnimationFrame(tick);}
+ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;}).observe(keyboard);
+ new ResizeObserver(()=>paint(elapsed)).observe(keyboard);
+ if(background.complete&&background.naturalWidth)prepareBackground();else background.addEventListener('load',prepareBackground,{once:true});
+ updateThermal(performance.now());paint(0);requestAnimationFrame(tick);
+})();
+</script>
